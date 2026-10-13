@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Учёт под контролем: как это выглядит для собственника</title>
-<meta name="description" content="Сроки, деньги, договоры и порядок в документах на одной странице. Пример на данных группы компаний, обезличено.">
+<title>Панель собственника и бухгалтерия под ней</title>
+<meta name="description" content="Весь бизнес на одном экране и порядок в учёте под цифрами: пример на вымышленной компании и рабочей системе учёта.">
 <meta name="robots" content="noindex,nofollow">
 <style>
 :root{--bg:#f6f8fb;--card:#fff;--ink:#1d2733;--mut:#5b6b7c;--line:#dbe3ec;--acc:#0b5ed7;--acc2:#0e9aa7;--warn:#c2410c;--ok:#15803d}
@@ -43,33 +43,48 @@ input.f{width:100%;max-width:420px;padding:10px 12px;border:1px solid var(--line
 footer{margin:48px 0 28px;color:var(--mut);font-size:14px}
 svg text{fill:var(--mut);font-size:11px}
 @media (max-width:560px){.bar span.l{flex-basis:46%}th,td{padding:7px 8px}}
+
+.panel{display:grid;gap:14px;grid-template-columns:repeat(4,1fr);margin:16px 0}
+@media (max-width:900px){.panel{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.panel{grid-template-columns:1fr}}
+a.tile{display:flex;flex-direction:column;gap:4px;min-height:170px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--acc)}
+a.tile:hover{border-color:var(--acc)}
+a.tile .q{font-size:13px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+a.tile .v{font-size:30px;font-weight:800;line-height:1.1;color:var(--ink)}
+a.tile .s{font-size:14px;color:var(--mut);margin-top:auto}
+a.tile.warn{border-color:var(--warn)}a.tile.warn .q{color:var(--warn)}
+a.tile.buh{background:linear-gradient(135deg,var(--acc),var(--acc2));border:0;color:#fff;grid-column:span 2}
+a.tile.buh .q,a.tile.buh .v,a.tile.buh .s{color:#fff}
+@media (max-width:480px){a.tile.buh{grid-column:auto}}
+.headline{font-size:18px;font-weight:600;margin:6px 0 2px}
 </style></head><body>
-<header class="top"><div class="wrap"><div class="crumbs">Как организован учёт: от цифры до документа</div>
+<header class="top"><div class="wrap"><div class="crumbs">Панель собственника</div>
 <a class="btn" href="https://t.me/pyankov_vv">Написать в Telegram</a></div></header>
 <main class="wrap">
-<h1>Учёт, в котором собственник видит всё сам</h1>
-<p class="lead">Я главный бухгалтер и автоматизатор. Это не презентация, а рабочая система: те же листы, по которым я веду учёт группы компаний, только без названий. Нажимайте на карточку, чтобы пройти глубже: от итоговой цифры до строки с документом.</p>
-<div class="grid">
- <a class="card" href="srok.html"><div class="q">Что горит сегодня?</div><div class="big">69</div>
-  <h3>процессов под сроком</h3><div>Календарь закрытия, ответственные, 42% процессов закрывается автоматикой.</div></a>
- <a class="card" href="dengi.html"><div class="q">Где деньги?</div><div class="big">1 экран</div>
-  <h3>движение денег и отчётность</h3><div>ОДДС по месяцам, топ статей, сходимость с 1С проверяется при сборке.</div></a>
- <a class="card" href="dogovory.html"><div class="q">Всё ли оформлено?</div><div class="big">1 069</div>
-  <h3>договоров в одном реестре</h3><div>Сроки, оригиналы, покрытие сканами, контрагенты и готовность к ЭДО.</div></a>
- <a class="card" href="poryadok.html"><div class="q">Не держится ли всё на одном человеке?</div><div class="big">8+</div>
-  <h3>регламентов и график документооборота</h3><div>Кто, когда и по шагам; доступы без паролей; платежи только человеком.</div></a>
+<h1>Весь бизнес на одном экране</h1>
+<p class="headline">Выручка +73% за год, прибыль 7,6 млн ₽; внимания требует дебиторка 3,6 млн ₽.</p>
+<p class="lead">Так выглядит панель по вашей деятельности, которую я собираю из 1С, банка и CRM. Нажмите на плитку: откроется раздел с разрезами. Последняя плитка ведёт в бухгалтерию: что делается внутри учёта, чтобы эти цифры были достоверны.</p>
+<div class="panel">
+<a class="tile warn" href="upravlenie.html#itogi"><div class="q">Требует внимания</div>
+ <div class="v">3,6 млн ₽</div><div class="s">Дебиторка почти месяц выручки: нам должны больше, чем мы поставщикам и налоговой.</div></a>
+<a class="tile" href="upravlenie.html#itogi"><div class="q">Выручка</div><div class="v">4,1 млн ₽</div>
+ <svg viewBox="0 0 150 38" width="100%" height="38" aria-hidden="true"><polyline points="4.0,28.1 16.9,24.5 29.8,20.7 42.7,12.8 55.6,34.0 68.5,23.4 81.5,17.4 94.4,14.2 107.3,21.0 120.2,11.1 133.1,6.5 146.0,4.0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="s">август 2026, +73% к сентябрю прошлого года</div></a>
+<a class="tile" href="upravlenie.html#pribyl"><div class="q">Прибыль</div><div class="v">7,6 млн ₽</div>
+ <svg viewBox="0 0 150 38" width="100%" height="38" aria-hidden="true"><polyline points="4.0,27.1 16.9,23.9 29.8,20.6 42.7,16.2 55.6,34.0 68.5,22.9 81.5,17.4 94.4,13.7 107.3,21.4 120.2,11.1 133.1,6.5 146.0,4.0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="s">за 12 месяцев, рентабельность 24,4%</div></a>
+<a class="tile" href="upravlenie.html#dengi"><div class="q">Деньги</div><div class="v">5,1 млн ₽</div>
+ <svg viewBox="0 0 150 38" width="100%" height="38" aria-hidden="true"><polyline points="4.0,34.0 16.9,32.1 29.8,29.4 42.7,26.7 55.6,29.0 68.5,27.0 81.5,23.9 94.4,20.3 107.3,18.5 120.2,14.3 133.1,9.2 146.0,4.0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="s">хватит на 1,6 мес. платежей</div></a>
+<a class="tile" href="upravlenie.html#balans"><div class="q">Долги</div><div class="v" style="font-size:22px">3,6 млн ₽ / 3,5 млн ₽</div>
+ <div class="s">нам должны / мы должны поставщикам и налогам</div></a>
+<a class="tile" href="upravlenie.html#prodazhi"><div class="q">Продажи</div><div class="v">13,5%</div>
+ <div class="s">1 240 заявок → 168 оплат, воронка по этапам</div></a>
+<a class="tile buh" href="buh.html"><div class="q">Что стоит за цифрами</div>
+ <div class="v">Бухгалтерия и порядок</div>
+ <div class="s">1 069 договоров в реестре, 69 процессов под сроком, 42% на автоматике, регламенты и доступы. Нажмите, чтобы пройти вглубь.</div></a>
 </div>
-<h2>Что я умею делать руками</h2>
-<div class="grid">
- <a class="card" href="avtomatizacii.html"><div class="q">Автоматизации 1С</div><div class="big">12</div>
-  <h3>боевых кейсов «было → стало»</h3><div>Внешние обработки, ЭДО, банк, отчётность. Что проверено и в каком статусе - честно.</div></a>
- <div class="card"><div class="q">Как это даёт деньги</div><h3>Меньше ручного труда, быстрее закрытие, нет «незаменимого человека»</h3>
-  <div>Разноска банковской выписки автоматом (около 90% строк), сверка выручки сети из 75 точек, сканы договоров по базе за секунды.</div></div>
-</div>
-<p class="note">Хотите проверить на своих данных: пришлите обезличенную выгрузку за один месяц, за день покажу, что раскладывается автоматически, а что остаётся человеку. Доступ к вашей базе не нужен.</p>
-<p><a class="btn" href="https://t.me/pyankov_vv">Обсудить в Telegram</a> <a class="btn alt" href="https://docs.google.com/spreadsheets/d/1tUkK8Kszr7YTdmkx_52jeDU1ICaMLgeNCZNMPDy0Fs4/edit#gid=0">Открыть живую таблицу</a></p>
+<p class="note">На панели условные цифры вымышленной компании. Раздел «Бухгалтерия» собран на рабочей системе учёта группы компаний, названия заменены.</p>
+<p><a class="btn" href="https://t.me/pyankov_vv">Обсудить в Telegram</a> <a class="btn alt" href="https://docs.google.com/spreadsheets/d/1tUkK8Kszr7YTdmkx_52jeDU1ICaMLgeNCZNMPDy0Fs4/edit#gid=0">Живая таблица учёта</a></p>
 </main>
-<footer class="wrap"><div><a href="index.html">Главная</a> · <a href="srok.html">Сроки</a> · <a href="dengi.html">Деньги</a> · <a href="dogovory.html">Договоры</a> · <a href="poryadok.html">Порядок</a> · <a href="avtomatizacii.html">Автоматизации</a></div>
+<footer class="wrap"><div><a href="index.html">Панель</a> · <a href="buh.html">Бухгалтерия</a> · <a href="srok.html">Сроки</a> · <a href="dengi.html">Деньги</a> · <a href="dogovory.html">Договоры</a> · <a href="poryadok.html">Порядок</a> · <a href="avtomatizacii.html">Автоматизации</a></div>
 <p>Данные примера обезличены: названия организаций и контрагентов заменены. Срез от 13.10.2026.
 Живая таблица, из которой всё собрано: <a href="https://docs.google.com/spreadsheets/d/1tUkK8Kszr7YTdmkx_52jeDU1ICaMLgeNCZNMPDy0Fs4/edit#gid=0">открыть Google-таблицу</a>.</p></footer>
 <script>
