@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Деньги: движение и отчётность</title>
+<meta name="description" content="ОДДС по месяцам, топ статей, сходимость с 1С.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--bg:#f6f8fb;--card:#fff;--ink:#1d2733;--mut:#5b6b7c;--line:#dbe3ec;--acc:#0b5ed7;--acc2:#0e9aa7;--warn:#c2410c;--ok:#15803d}
+@media (prefers-color-scheme:dark){:root{--bg:#10161d;--card:#18212b;--ink:#e8eef5;--mut:#9fb0c2;--line:#2a3745;--acc:#6aa5ff;--acc2:#4fd1d9;--warn:#fb923c;--ok:#4ade80}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top{background:var(--card);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;flex-wrap:wrap}
+.crumbs{font-size:14px;color:var(--mut)}.crumbs a{text-decoration:none}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:9px 16px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px}
+.btn.alt{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.2;margin:28px 0 10px}
+h2{font-size:22px;margin:34px 0 12px}h3{font-size:17px;margin:0 0 6px}
+p.lead{font-size:18px;color:var(--mut);margin:0 0 18px;max-width:760px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+a.card{display:block;text-decoration:none;color:inherit}a.card:hover{border-color:var(--acc)}
+.card .q{font-size:13px;color:var(--acc2);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.big{font-size:34px;font-weight:800;line-height:1.1;color:var(--acc)}
+.kpi{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:14px 0}
+.kpi .card{padding:12px 14px}.kpi .big{font-size:28px}.kpi small{color:var(--mut);display:block}
+.bar{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:14px}
+.bar span.l{flex:0 0 38%;min-width:110px}.bar span.t{flex:1;background:var(--line);border-radius:6px;height:16px;overflow:hidden}
+.bar span.t i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.bar span.n{flex:0 0 64px;text-align:right;font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--card);font-size:13px;color:var(--mut)}
+input.f{width:100%;max-width:420px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;margin:8px 0}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;border:1px solid var(--line)}
+.tag.bad{color:var(--warn);border-color:var(--warn)}.tag.good{color:var(--ok);border-color:var(--ok)}
+.note{font-size:14px;color:var(--mut);border-left:3px solid var(--acc2);padding:4px 12px;margin:14px 0}
+.case{margin:10px 0}.case b{color:var(--acc2)}
+.steps{margin:6px 0 0;padding-left:20px}
+footer{margin:48px 0 28px;color:var(--mut);font-size:14px}
+svg text{fill:var(--mut);font-size:11px}
+@media (max-width:560px){.bar span.l{flex-basis:46%}th,td{padding:7px 8px}}
+</style></head><body>
+<header class="top"><div class="wrap"><div class="crumbs"><a href="index.html">Главная</a> / Деньги</div>
+<a class="btn" href="https://t.me/pyankov_vv">Написать в Telegram</a></div></header>
+<main class="wrap">
+<h1>Где деньги</h1>
+<p class="lead">Дашборд строится из выгрузки отчёта 1С «Анализ движения денежных средств» и сверяется с итогом из 1С: если цифры не сходятся, это видно сразу. Новые месяцы подхватываются сами.</p>
+<div class="kpi">
+ <div class="card"><div class="big">267 700 ₽</div><small>поступления за период</small></div>
+ <div class="card"><div class="big">34 993 ₽</div><small>списания за период</small></div>
+ <div class="card"><div class="big">9</div><small>месяцев в выгрузке</small></div>
+ <div class="card"><div class="big" style="color:var(--ok)">сходится</div><small>с итогом из 1С</small></div>
+</div>
+<h2>Чистый поток по месяцам</h2><div class="card"><svg viewBox="0 0 600 190" width="100%" role="img" aria-label="Чистый поток по месяцам"><line x1="20" y1="95" x2="590" y2="95" stroke="currentColor" opacity=".3"/><rect x="24" y="95" width="54" height="1" fill="#0e9aa7" rx="3"><title>Апрель 2022: 0 ₽</title></rect><text x="51.0" y="185" text-anchor="middle">Апр</text><rect x="86" y="86" width="54" height="9" fill="#0e9aa7" rx="3"><title>Май 2022: 3 640 ₽</title></rect><text x="113.0" y="185" text-anchor="middle">Май</text><rect x="148" y="59" width="54" height="36" fill="#0e9aa7" rx="3"><title>Июнь 2022: 13 350 ₽</title></rect><text x="175.0" y="185" text-anchor="middle">Июн</text><rect x="210" y="71" width="54" height="24" fill="#0e9aa7" rx="3"><title>Июль 2022: 8 821 ₽</title></rect><text x="237.0" y="185" text-anchor="middle">Июл</text><rect x="272" y="95" width="54" height="17" fill="#c2410c" rx="3"><title>Август 2022: -6 490 ₽</title></rect><text x="299.0" y="185" text-anchor="middle">Авг</text><rect x="334" y="95" width="54" height="58" fill="#c2410c" rx="3"><title>Сентябрь 2022: -21 390 ₽</title></rect><text x="361.0" y="185" text-anchor="middle">Сен</text><rect x="396" y="94" width="54" height="1" fill="#0e9aa7" rx="3"><title>Октябрь 2022: 610 ₽</title></rect><text x="423.0" y="185" text-anchor="middle">Окт</text><rect x="458" y="20" width="54" height="75" fill="#0e9aa7" rx="3"><title>Ноябрь 2022: 27 510 ₽</title></rect><text x="485.0" y="185" text-anchor="middle">Ноя</text><rect x="520" y="66" width="54" height="29" fill="#0e9aa7" rx="3"><title>Декабрь 2022: 11 000 ₽</title></rect><text x="547.0" y="185" text-anchor="middle">Дек</text></svg></div>
+<p class="note">Пример собран на небольшой демонстрационной выгрузке. На реальных данных группы он строится по сотням тысяч проводок: 114 568 проводок и 74 751 документ банка и кассы проверены живым открытием.</p>
+<h2>Топ статей ДДС</h2><div class="card"><div class="bar"><span class="l">1.1.11 Оплата от покупателей (Агентские вознаграждения)</span><span class="t"><i style="width:100%"></i></span><span class="n">225 500 ₽</span></div><div class="bar"><span class="l">1.1.01 Оплата от покупателей</span><span class="t"><i style="width:18%"></i></span><span class="n">42 200 ₽</span></div><div class="bar"><span class="l">1.2.27 Прочие налоги и сборы</span><span class="t"><i style="width:2%"></i></span><span class="n">1 ₽</span></div><div class="bar"><span class="l">3.2.01 Погашение кредитов и займов</span><span class="t"><i style="width:2%"></i></span><span class="n">490 ₽</span></div><div class="bar"><span class="l">1.2.17 Расходы на услуги банков</span><span class="t"><i style="width:2%"></i></span><span class="n">3 039 ₽</span></div><div class="bar"><span class="l">1.2.16 Налоги</span><span class="t"><i style="width:5%"></i></span><span class="n">11 954 ₽</span></div><div class="bar"><span class="l">1.2.28 Выдача подотчетных сумм</span><span class="t"><i style="width:8%"></i></span><span class="n">20 000 ₽</span></div></div>
+<h2>Управленческая отчётность в живом виде</h2>
+<div class="grid">
+ <a class="card" href="https://valeraslim86-afk.github.io/showroom/upravlenie.html"><h3>Управленческая отчётность</h3><div>Выручка, прибыль, ДДС, баланс; сходимость проверяется при сборке. Демо на вымышленных данных.</div></a>
+ <a class="card" href="https://avtomatizaciya.github.io/panel-buhfirma-demo/"><h3>Панель бухгалтерской фирмы</h3><div>Цифры бизнеса на одном экране, фильтры, переход до первички.</div></a>
+ <a class="card" href="https://avtomatizaciya.github.io/panel-prodazh-demo/"><h3>Панель продаж</h3><div>Выручка, воронка и динамика для руководителя.</div></a>
+</div>
+<p><a class="btn alt" href="https://docs.google.com/spreadsheets/d/1tUkK8Kszr7YTdmkx_52jeDU1ICaMLgeNCZNMPDy0Fs4/edit#gid=1392594297">Открыть ОДДС в таблице</a></p>
+</main>
+<footer class="wrap"><div><a href="index.html">Главная</a> · <a href="srok.html">Сроки</a> · <a href="dengi.html">Деньги</a> · <a href="dogovory.html">Договоры</a> · <a href="poryadok.html">Порядок</a> · <a href="avtomatizacii.html">Автоматизации</a></div>
+<p>Данные примера обезличены: названия организаций и контрагентов заменены. Срез от 13.10.2026.
+Живая таблица, из которой всё собрано: <a href="https://docs.google.com/spreadsheets/d/1tUkK8Kszr7YTdmkx_52jeDU1ICaMLgeNCZNMPDy0Fs4/edit#gid=0">открыть Google-таблицу</a>.</p></footer>
+<script>
+document.querySelectorAll('input.f').forEach(function(i){
+ i.addEventListener('input',function(){
+  var t=document.getElementById(i.dataset.t),q=i.value.toLowerCase();
+  t.querySelectorAll('tbody tr').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)<0?'none':''});
+ });});
+</script></body></html>

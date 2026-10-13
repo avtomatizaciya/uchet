@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Учёт под контролем: как это выглядит для собственника</title>
+<meta name="description" content="Сроки, деньги, договоры и порядок в документах на одной странице. Пример на данных группы компаний, обезличено.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--bg:#f6f8fb;--card:#fff;--ink:#1d2733;--mut:#5b6b7c;--line:#dbe3ec;--acc:#0b5ed7;--acc2:#0e9aa7;--warn:#c2410c;--ok:#15803d}
+@media (prefers-color-scheme:dark){:root{--bg:#10161d;--card:#18212b;--ink:#e8eef5;--mut:#9fb0c2;--line:#2a3745;--acc:#6aa5ff;--acc2:#4fd1d9;--warn:#fb923c;--ok:#4ade80}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top{background:var(--card);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;flex-wrap:wrap}
+.crumbs{font-size:14px;color:var(--mut)}.crumbs a{text-decoration:none}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:9px 16px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px}
+.btn.alt{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.2;margin:28px 0 10px}
+h2{font-size:22px;margin:34px 0 12px}h3{font-size:17px;margin:0 0 6px}
+p.lead{font-size:18px;color:var(--mut);margin:0 0 18px;max-width:760px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+a.card{display:block;text-decoration:none;color:inherit}a.card:hover{border-color:var(--acc)}
+.card .q{font-size:13px;color:var(--acc2);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.big{font-size:34px;font-weight:800;line-height:1.1;color:var(--acc)}
+.kpi{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:14px 0}
+.kpi .card{padding:12px 14px}.kpi .big{font-size:28px}.kpi small{color:var(--mut);display:block}
+.bar{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:14px}
+.bar span.l{flex:0 0 38%;min-width:110px}.bar span.t{flex:1;background:var(--line);border-radius:6px;height:16px;overflow:hidden}
+.bar span.t i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.bar span.n{flex:0 0 64px;text-align:right;font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--card);font-size:13px;color:var(--mut)}
+input.f{width:100%;max-width:420px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;margin:8px 0}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;border:1px solid var(--line)}
+.tag.bad{color:var(--warn);border-color:var(--warn)}.tag.good{color:var(--ok);border-color:var(--ok)}
+.note{font-size:14px;color:var(--mut);border-left:3px solid var(--acc2);padding:4px 12px;margin:14px 0}
+.case{margin:10px 0}.case b{color:var(--acc2)}
+.steps{margin:6px 0 0;padding-left:20px}
+footer{margin:48px 0 28px;color:var(--mut);font-size:14px}
+svg text{fill:var(--mut);font-size:11px}
+@media (max-width:560px){.bar span.l{flex-basis:46%}th,td{padding:7px 8px}}
+</style></head><body>
+<header class="top"><div class="wrap"><div class="crumbs">Как организован учёт: от цифры до документа</div>
+<a class="btn" href="https://t.me/pyankov_vv">Написать в Telegram</a></div></header>
+<main class="wrap">
+<h1>Учёт, в котором собственник видит всё сам</h1>
+<p class="lead">Я главный бухгалтер и автоматизатор. Это не презентация, а рабочая система: те же листы, по которым я веду учёт группы компаний, только без названий. Нажимайте на карточку, чтобы пройти глубже: от итоговой цифры до строки с документом.</p>
+<div class="grid">
+ <a class="card" href="srok.html"><div class="q">Что горит сегодня?</div><div class="big">69</div>
+  <h3>процессов под сроком</h3><div>Календарь закрытия, ответственные, 42% процессов закрывается автоматикой.</div></a>
+ <a class="card" href="dengi.html"><div class="q">Где деньги?</div><div class="big">1 экран</div>
+  <h3>движение денег и отчётность</h3><div>ОДДС по месяцам, топ статей, сходимость с 1С проверяется при сборке.</div></a>
+ <a class="card" href="dogovory.html"><div class="q">Всё ли оформлено?</div><div class="big">1 069</div>
+  <h3>договоров в одном реестре</h3><div>Сроки, оригиналы, покрытие сканами, контрагенты и готовность к ЭДО.</div></a>
+ <a class="card" href="poryadok.html"><div class="q">Не держится ли всё на одном человеке?</div><div class="big">8+</div>
+  <h3>регламентов и график документооборота</h3><div>Кто, когда и по шагам; доступы без паролей; платежи только человеком.</div></a>
+</div>
+<h2>Что я умею делать руками</h2>
+<div class="grid">
+ <a class="card" href="avtomatizacii.html"><div class="q">Автоматизации 1С</div><div class="big">12</div>
+  <h3>боевых кейсов «было → стало»</h3><div>Внешние обработки, ЭДО, банк, отчётность. Что проверено и в каком статусе - честно.</div></a>
+ <div class="card"><div class="q">Как это даёт деньги</div><h3>Меньше ручного труда, быстрее закрытие, нет «незаменимого человека»</h3>
+  <div>Разноска банковской выписки автоматом (около 90% строк), сверка выручки сети из 75 точек, сканы договоров по базе за секунды.</div></div>
+</div>
+<p class="note">Хотите проверить на своих данных: пришлите обезличенную выгрузку за один месяц, за день покажу, что раскладывается автоматически, а что остаётся человеку. Доступ к вашей базе не нужен.</p>
+<p><a class="btn" href="https://t.me/pyankov_vv">Обсудить в Telegram</a> <a class="btn alt" href="https://docs.google.com/spreadsheets/d/1tUkK8Kszr7YTdmkx_52jeDU1ICaMLgeNCZNMPDy0Fs4/edit#gid=0">Открыть живую таблицу</a></p>
+</main>
+<footer class="wrap"><div><a href="index.html">Главная</a> · <a href="srok.html">Сроки</a> · <a href="dengi.html">Деньги</a> · <a href="dogovory.html">Договоры</a> · <a href="poryadok.html">Порядок</a> · <a href="avtomatizacii.html">Автоматизации</a></div>
+<p>Данные примера обезличены: названия организаций и контрагентов заменены. Срез от 13.10.2026.
+Живая таблица, из которой всё собрано: <a href="https://docs.google.com/spreadsheets/d/1tUkK8Kszr7YTdmkx_52jeDU1ICaMLgeNCZNMPDy0Fs4/edit#gid=0">открыть Google-таблицу</a>.</p></footer>
+<script>
+document.querySelectorAll('input.f').forEach(function(i){
+ i.addEventListener('input',function(){
+  var t=document.getElementById(i.dataset.t),q=i.value.toLowerCase();
+  t.querySelectorAll('tbody tr').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)<0?'none':''});
+ });});
+</script></body></html>
